@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class QuotesController < ApplicationController
-  before_action :set_quote, only: %i[ show edit update destroy ]
+  before_action :set_quote, only: %i[show edit update destroy]
 
   # GET /quotes or /quotes.json
   def index
@@ -7,8 +9,7 @@ class QuotesController < ApplicationController
   end
 
   # GET /quotes/1 or /quotes/1.json
-  def show
-  end
+  def show; end
 
   # GET /quotes/new
   def new
@@ -16,8 +17,7 @@ class QuotesController < ApplicationController
   end
 
   # GET /quotes/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /quotes or /quotes.json
   def create
@@ -61,6 +61,7 @@ class QuotesController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
       @quote = Current.company.quotes.find(params[:id])

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Quote < ApplicationRecord
   scope :ordered, -> { order(created_at: :desc) }
   belongs_to :company, default: -> { Current.comapny }
