@@ -2,7 +2,10 @@
 
 <%= simple_form_for(
       resource, as: resource_name, url: password_path(resource_name),
-      html: { method: :put, class: "rounded-md overflow-hidden shadow-lg flex flex-col justify-center p-8 w-2/3 mx-auto" }) do |f| %>
+      html: {
+        method: :put,
+        class: "rounded-md overflow-hidden shadow-lg flex flex-col justify-center p-8 w-2/3 mx-auto"
+      }) do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :reset_password_token, as: :hidden %>
