@@ -1,0 +1,9 @@
+<% flash.each do |flash_type, message| %>
+  <p
+    class="p-2 bg-white <%= flash_type == "error" ? "text-red-500" : "text-indigo-500" %> font-sm animate-[appear-then-fade_4s_both] rounded-full"
+    data-controller="removals"
+    data-action="animationend->removals#remove"
+  >
+    <%= message %>
+  </p>
+<% end %>

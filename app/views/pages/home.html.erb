@@ -1,0 +1,12 @@
+<main class="mt-6 mx-3 flex flex-col h-full">
+  <h1 class="text-2xl text-center text-indigo-700/50">Quote editor</h1>
+  <div class="flex flex-col justify-center items-center pb-3 border-solid flex-1">
+    <p>A blazing fast quote editor built with Hotwire</p>
+
+    <% if user_signed_in? %>
+      <%= link_to "View quotes", quotes_path, class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm" %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm" %>
+    <% end %>
+  </div>
+</main>

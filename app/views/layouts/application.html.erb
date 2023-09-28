@@ -11,7 +11,11 @@
   </head>
 
   <body class="min-h-screen w-full">
-    <p id="flash_message" class="text-green-500"><%= notice %></p>
+    <%= render "layouts/navbar" %>
+    <div id="flash" class="fixed top-20 left-[50%] flex items-center flex-col gap-y-2 -translate-x-[50%] max-w-full">
+      <%= render "layouts/flash" %>
+    </div>
+    <p class="alert" class="text-yellow-500"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
