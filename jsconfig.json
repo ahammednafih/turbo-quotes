@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "target": "es6",
+    "noEmit": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "vendor", "public"],
+  "compileOnSave": false
+}

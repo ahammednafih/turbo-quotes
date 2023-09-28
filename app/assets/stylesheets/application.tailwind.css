@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .turbo-progress-bar {
   background: linear-gradient(to right,#b873a5,#3e5432);;
 }
