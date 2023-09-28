@@ -4,9 +4,9 @@
   <div class="flex justify-between items-center pb-3 border-solid border-b">
     <h1>Quotes</h1>
     <%= link_to "New quote",
-                new_quote_path,
-                data: { turbo_frame: "new_quote" },
-                class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm" %>
+          new_quote_path,
+          data: { turbo_frame: "new_quote" },
+          class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm" %>
   </div>
   <%= turbo_frame_tag "new_quote" %>
   <div id="quotes" class="flex flex-col gap-y-2 mt-3">

@@ -1,6 +1,8 @@
 <h2 class="text-2xl font-bold text-indigo-900/50 text-center my-3">Change your password</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "rounded-md overflow-hidden shadow-lg flex flex-col justify-center p-8 w-2/3 mx-auto" }) do |f| %>
+<%= simple_form_for(
+      resource, as: resource_name, url: password_path(resource_name),
+      html: { method: :put, class: "rounded-md overflow-hidden shadow-lg flex flex-col justify-center p-8 w-2/3 mx-auto" }) do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :reset_password_token, as: :hidden %>
@@ -12,13 +14,14 @@
     </div>
     <div class="md:w-2/3">
       <%= f.input :password,
-                  label: false,
-                  required: true,
-                  autofocus: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password",
-                    class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
-                  } %>
+            label: false,
+            required: true,
+            autofocus: true,
+            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+            input_html: {
+              autocomplete: "new-password",
+              class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
+            } %>
     </div>
   </div>
   <div class="md:flex md:items-center mb-6">
@@ -27,11 +30,12 @@
     </div>
     <div class="md:w-2/3">
       <%= f.input :password_confirmation,
-                  label: false,
-                  required: true,
-                  input_html: { autocomplete: "new-password",
-                    class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
-                  } %>
+            label: false,
+            required: true,
+            input_html: {
+              autocomplete: "new-password",
+              class: "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
+            } %>
     </div>
   </div>
   <div class="md:flex md:items-center">

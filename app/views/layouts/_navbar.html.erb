@@ -7,12 +7,12 @@
       Hi, <%= current_user.name %>!
     </div>
     <%= button_to "Sign out",
-                  destroy_user_session_path,
-                  method: :delete,
-                  class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm" %>
+          destroy_user_session_path,
+          method: :delete,
+          class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm" %>
   <% else %>
     <%= link_to "Sign in",
-                new_user_session_path,
-                class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm ml-auto" %>
+          new_user_session_path,
+          class: "bg-indigo-500 text-white p-2 rounded-sm hover:bg-indigo-600 hover:shadow-sm ml-auto" %>
   <% end %>
 </header>
