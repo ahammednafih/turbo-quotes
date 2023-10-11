@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+RED='\033[0;31m'
+
+if ! redis-server --version &> /dev/null
+then
+  echo "redis-server executable was not detected in the system."
+  echo "Download redis-server at https://redis.io/docs/getting-started/installation/"
+  exit 0
+fi
+
+if [[ "$(redis-cli ping)"  =~ 'PONG' ]];
+then
+  echo -e "${RED}redis-server is already running..."
+  echo -e "${RED}Terminate running instance"
+else
+  echo "Starting redis-server..."
+  redis-server
+fi
